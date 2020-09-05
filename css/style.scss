@@ -37,7 +37,7 @@ $c-text: #9e8e92;
 * {
     margin: 0;
     padding: 0;
-
+   
 }
 
 body {
@@ -229,181 +229,28 @@ body {
         }
 
         .content {
-
-
+            
+            
             @include for-phone-only {
-                height: calc(100vh - 85px);
+                height: calc( 100vh - 85px );
                 overflow: auto;
                 scroll-behavior: smooth;
             }
-
+          
             section.home {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
-
+                background-image: url('../img/home-bg.jpg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 font-weight: 800;
                 font-size: 31px;
                 color: rgb(255, 255, 255);
                 line-height: 1.2;
                 text-align: center;
-                //padding: 0px 15px;
-                position: relative;
-
-                .home__slider {
-                    //position: absolute;
-                    //top: 0;
-                   // left: 0;
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-
-                    &:hover {
-
-                        .home__slider-arrow {
-                            &.arrow-left {
-                                left: 20px;
-                            }
-
-                            &.arrow-right {
-                                right: 20px;
-                            }
-                        }
-                    }
-
-                    .home__slider-arrow {
-                        position: absolute;
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.5);
-                        top: 50%;
-                        transform: translateY(-50%);
-                        transition: .3s;
-                        cursor: pointer;
-                        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
-
-                        &:hover{
-                            background-color: rgba(255, 255, 255, 1); 
-                        }
-
-
-
-                        &.arrow-left {
-                            left: -50px;
-
-                            &:hover{
-                                .home__slider-arrow-inner{
-                                    transform: rotate(-360deg);
-                                }  
-                            }
-
-                            .home__slider-arrow-inner{
-                                height: 100%;
-                                width: 100%;
-                                transition: .3s;
-
-                                &:before{
-                                    position: absolute;
-                                    content: '';
-                                    background-color: red;
-                                    height: 5px;
-                                    width: 30px;
-                                    top: 50%;
-                                    right: 5px;
-                                    transform: translate(0%, -50%);
-                                }
-                                &:after{
-                                    position: absolute;
-                                    content: '';
-                                    //background-color: red;
-                                    height: 0px;
-                                    width: 0px;
-                                    border: 10px solid transparent;
-                                    border-right: 10px solid red;
-
-                                    top: 50%;
-                                    right: 34px;
-                                    transform: translate(0, -50%);
-                                }
-                            }
-                        }
-
-                        &.arrow-right {
-                            right: -50px;
-
-                            &:hover{
-                                .home__slider-arrow-inner{
-                                    transform: rotate(360deg);
-                                }  
-                            }
-
-                            .home__slider-arrow-inner{
-                                height: 100%;
-                                width: 100%;
-                                transition: .3s;
-
-                                &:before{
-                                    position: absolute;
-                                    content: '';
-                                    background-color: red;
-                                    height: 5px;
-                                    width: 30px;
-                                    top: 50%;
-                                    left: 5px;
-                                    transform: translate(0%, -50%);
-                                }
-                                &:after{
-                                    position: absolute;
-                                    content: '';
-                                    //background-color: red;
-                                    height: 0px;
-                                    width: 0px;
-                                    border: 10px solid transparent;
-                                    border-left: 10px solid red;
-
-                                    top: 50%;
-                                    left: 34px;
-                                    transform: translate(0, -50%);
-                                }
-                            }
-                        }
-                    }
-
-                    .home__slider-item {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        display: none;
-                        z-index: -1;
-
-                        @for $i from 0 through 3 {
-                            &.item#{$i} {
-                                background-image: url(../img/home-slider#{$i}.jpg);
-                            }
-                        }
-                    }
-
-                    .home__slider-line {
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        width: 100%;
-                        height: 10px;
-
-                        .home__slider-innerline {
-                            background-color: red;
-                            height: 100%;
-                            width: 0%;
-                        }
-                    }
-                }
+                padding: 0px 15px;
 
                 .home--title {
                     padding: 0px 15px;
