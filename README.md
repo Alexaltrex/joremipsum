@@ -5,8 +5,8 @@
 Верстка одностраничного сайта.
 
 ## Запуск проекта:
-1. Клонирование и запуск: git clone https://github.com/Alexaltrex/SolidCompas.git;
-2. Переход в директорию с проектом: cd SolidCompas;
+1. Клонирование и запуск: git clone https://github.com/Alexaltrex/joremipsum.git;
+2. Переход в директорию с проектом: cd joremipsum;
 3. Запуск файла index.html;
 
 
