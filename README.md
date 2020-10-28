@@ -21,7 +21,5 @@
 * Адаптивное меню;
 
 <img src="img/github1.jpg" width="600">
-<div style="display: flex>
-    <img src="img/github2.jpg" height="200">
-    <img src="img/github3.jpg" height="200">
-</div>
+<img src="img/github2.jpg" height="400">
+<img src="img/github3.jpg" height="400">
